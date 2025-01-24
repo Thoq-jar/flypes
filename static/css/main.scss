@@ -14,26 +14,40 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 90vh;
+  gap: 1rem;
 }
 
 .title {
   font-size: 4rem;
   font-weight: bold;
+  user-select: none;
 }
 
 .input {
-  border: 2px solid #fff;
+  border: mediumpurple solid 2px;
+  background: transparent;
+  color: white;
   border-radius: 4px;
   padding: 10px;
-  width: 100%;
+  transition: border-color 0.2s;
+
+  &:focus {
+    outline: none;
+    border-color: rgb(182, 107, 221);
+  }
 }
 
 .button {
-  background-color: #fff;
+  background-color: mediumpurple;
   color: #000;
-  border: 2px solid #fff;
+  border: transparent solid 0;
   border-radius: 4px;
   padding: 10px;
-  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: rgb(182, 107, 221);
+  }
 }
