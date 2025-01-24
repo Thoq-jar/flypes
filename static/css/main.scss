@@ -46,6 +46,7 @@ html, body {
   padding: 10px;
   cursor: pointer;
   transition: background-color 0.2s;
+  user-select: none;
 
   &:hover {
     background-color: rgb(182, 107, 221);
