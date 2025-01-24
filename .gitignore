@@ -1,6 +1,7 @@
 node_modules/
 __pycache__/
 .venv/
+.webassets-cache/
 
 .env
 !.env.example
@@ -8,6 +9,3 @@ __pycache__/
 
 *.js
 *.css
-!tailwind.css
-!postcss.config.js
-!tailwind.config.js

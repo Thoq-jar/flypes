@@ -3,13 +3,11 @@
   "scripts": {
     "dev:frontend": "tsc --watch",
     "dev:backend": "python src/app.py",
-    "dev:tailwind": "tailwindcss -i ./static/css/tailwind.css -o ./static/css/main.css --watch",
-    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\" \"npm run dev:tailwind\"",
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
 
     "build:frontend": "tsc",
     "build:backend": "echo 'Building backend'",
-    "build:tailwind": "tailwindcss -i ./static/css/tailwind.css -o ./static/css/main.css",
-    "build": "concurrently \"npm run build:frontend\" \"npm run build:backend\" \"npm run build:tailwind\"",
+    "build": "concurrently \"npm run build:frontend\" \"npm run build:backend\"",
 
     "start:frontend": "echo 'Starting frontend'",
     "start:backend": "gunicorn -w 4 --bind 0.0.0.0:8080 'src.app:app'",
@@ -19,7 +17,6 @@
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "postcss": "^8.5.1",
-    "tailwindcss": "^4.0.0",
     "typescript": "^5.0.0",
     "concurrently": "^8.0.0",
     "@types/node": "^20.0.0"
